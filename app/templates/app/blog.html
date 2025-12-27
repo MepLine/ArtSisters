@@ -1,0 +1,40 @@
+﻿{% extends "app/layout.html" %}
+{% block content %}
+
+<h2>{{ title }}</h2>
+<br />
+
+<div class="row">
+    {% for post in posts %}
+    <div class="col-md-4">
+        <div class="panel panel-default blog-card">
+            <div class="panel-body">
+                {% if post.image and post.image.url != '/media/temp.jpg' %}
+                <img src="{{ post.image.url }}" alt="Картинка статьи" class="img-responsive blog-img" />
+                <br />
+                {% endif %}
+
+                <h4 style="margin-top:0;">
+                    <a href="{% url 'blogpost' parametr=post.id %}">{{ post.title }}</a>
+                </h4>
+
+                <p class="text-muted" style="margin-bottom:10px;">
+                    {{ post.posted }}
+                </p>
+
+                <p><strong>{{ post.summary }}</strong></p>
+
+                <p>
+                    <a class="btn btn-default btn-sm" href="{% url 'blogpost' parametr=post.id %}">
+                        Читать &raquo;
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>Пока нет статей.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

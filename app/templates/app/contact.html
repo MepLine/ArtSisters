@@ -1,0 +1,79 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1 style="margin-top:0;">Контакты</h1>
+<p class="text-muted" style="margin-top:-6px;">
+    Свяжитесь с нами удобным способом — ответим и подберём формат встречи.
+</p>
+
+<div class="row" style="margin-top:20px;">
+    <div class="col-md-8 col-md-offset-2">
+
+        <div class="panel panel-default" style="border-radius:16px;">
+            <div class="panel-body" style="padding:26px 26px;">
+
+                <h3 style="margin-top:0; font-weight:700;">Связаться с ArtSisters</h3>
+                <p class="text-muted" style="margin-bottom:18px;">
+                    Пишите или звоните — мы быстро ответим и предложим варианты по дате,
+                    уровню и формату мероприятия.
+                </p>
+
+                <div style="display:grid; gap:16px;">
+
+                    <div style="display:flex; gap:14px;">
+                        <div class="mini-ico"><i class="fa-solid fa-phone"></i></div>
+                        <div>
+                            <div class="mini-title">Телефон</div>
+                            <div class="mini-text"><strong>+7 (900) 123-45-67</strong></div>
+                            <div class="mini-text">Ежедневно: 10:00–20:00</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:14px;">
+                        <div class="mini-ico"><i class="fa-solid fa-envelope"></i></div>
+                        <div>
+                            <div class="mini-title">Email</div>
+                            <div class="mini-text"><strong>artsisters@example.com</strong></div>
+                            <div class="mini-text">Для вопросов и сотрудничества</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:14px;">
+                        <div class="mini-ico"><i class="fa-brands fa-vk"></i></div>
+                        <div>
+                            <div class="mini-title">Социальные сети</div>
+                            <div class="mini-text"><strong>vk.com/artsisters</strong> • Telegram</div>
+                            <div class="mini-text">Анонсы, расписание, фото</div>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:14px;">
+                        <div class="mini-ico"><i class="fa-solid fa-location-dot"></i></div>
+                        <div>
+                            <div class="mini-title">Адрес</div>
+                            <div class="mini-text"><strong>Россия, г. Псков</strong></div>
+                            <div class="mini-text">ул. Владимирская, д. 5Б</div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr class="soft-hr" />
+
+                <div>
+                    <a href="{% url 'pool' %}" class="btn btn-primary">
+                        Оставить отзыв <i class="fa-solid "></i>
+                    </a>
+                    <a href="{% url 'blog' %}" class="btn btn-default">
+                        Перейти в блог <i class="fa-solid "></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

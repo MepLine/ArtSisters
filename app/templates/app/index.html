@@ -1,0 +1,178 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div class="jumbotron hero">
+    <div class="hero-inner">
+        <div class="hero-text">
+            <div class="hero-badge"><i class="fa-solid fa-palette"></i> Студия творчества</div>
+            <h1>ArtSisters</h1>
+            <p class="lead">
+                ArtSisters — творческий проект про искусство, вдохновение и самовыражение.
+                Проводим мастер-классы и арт-встречи для детей, взрослых и команд.
+            </p>
+            <div class="hero-actions">
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-large">
+                    Записаться <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="{% url 'blog' %}" class="btn btn-default btn-large">Смотреть блог</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-num">5</div>
+                    <div class="stat-label">форматов встреч</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="stat-label">подходит новичкам</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-num"><i class="fa-solid fa-heart"></i></div>
+                    <div class="stat-label">тёплая атмосфера</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-side hidden-xs hidden-sm">
+            <div class="hero-card">
+                <div class="hero-card-title">Быстрая запись</div>
+                <div class="hero-card-muted">Ответим на вопросы и подберём формат.</div>
+
+                <div class="hero-contacts">
+                    <div><i class="fa-solid fa-phone"></i> <strong>+7 (999) 123-45-67</strong></div>
+                    <div><i class="fa-brands fa-vk"></i> <strong>vk.com/artsisters</strong></div>
+                    <div><i class="fa-solid fa-location-dot"></i> ул. Владимирская, д.5Б</div>
+                </div>
+
+                <div class="hero-card-actions">
+                    <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Контакты</a>
+                    <a href="{% url 'pool' %}" class="btn btn-default btn-sm">Отзыв</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- WHY US -->
+<div class="section">
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="section-title">О проекте</h3>
+            <p class="text-muted">
+                ArtSisters создан для тех, кто любит творчество и хочет развиваться
+                в искусстве, дизайне и визуальной культуре.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h3 class="section-title">Наш подход</h3>
+            <p class="text-muted">
+                Никаких «надо уметь рисовать». Даем простые шаги, показываем приёмы
+                и помогаем получить классный результат.
+            </p>
+        </div>
+        <div class="col-md-4">
+            <h3 class="section-title">Сообщество</h3>
+            <p class="text-muted">
+                Встречи, общение, обмен идеями и поддержка.
+                Здесь легко начать и приятно продолжать.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- WHY CARDS -->
+<div class="section">
+    <div class="row text-center">
+        <div class="col-md-4">
+            <div class="mini-card">
+                <div class="mini-ico"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <div class="mini-title">Лёгкий старт</div>
+                <div class="mini-text">Подойдёт новичкам: всё объясняем по шагам.</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mini-card">
+                <div class="mini-ico"><i class="fa-solid fa-mug-hot"></i></div>
+                <div class="mini-title">Атмосфера</div>
+                <div class="mini-text">Тёплая студия, музыка, общение и вдохновение.</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="mini-card">
+                <div class="mini-ico"><i class="fa-solid fa-star"></i></div>
+                <div class="mini-title">Результат</div>
+                <div class="mini-text">Уходите с готовой работой и классными фото.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="soft-hr" />
+
+<h2 class="text-center section-head">Форматы мероприятий</h2>
+<p class="text-center text-muted" style="margin-top:-10px; margin-bottom:24px;">
+    Выбирайте формат — подберём тему и уровень сложности.
+</p>
+
+<!-- ВАЖНО: equal-panels выравнивает высоту карточек в одном ряду -->
+<div class="row text-center equal-panels">
+    <div class="col-md-4">
+        <div class="panel panel-default event-panel">
+            <div class="panel-body event-card">
+                <div class="event-ico"><i class="fa-solid fa-child-reaching"></i></div>
+                <h4>Детские мастер-классы</h4>
+                <p>Творческие занятия для детей: воображение, уверенность и интерес к искусству.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default event-panel">
+            <div class="panel-body event-card">
+                <div class="event-ico"><i class="fa-solid fa-paintbrush"></i></div>
+                <h4>Мастер-классы для взрослых</h4>
+                <p>Живопись и иллюстрация для отдыха, самовыражения и творческого роста.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default event-panel">
+            <div class="panel-body event-card">
+                <div class="event-ico"><i class="fa-solid fa-users"></i></div>
+                <h4>Корпоративы</h4>
+                <p>Творческий тимбилдинг: сплочение команды и новые эмоции без «офиса».</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Записаться</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row text-center equal-panels">
+    <div class="col-md-6">
+        <div class="panel panel-default event-panel">
+            <div class="panel-body event-card event-card-wide">
+                <div class="event-ico"><i class="fa-solid fa-music"></i></div>
+                <h4>Творческие встречи и вечеринки</h4>
+                <p>Арт-вечера, тематические встречи и неформальные события в дружеской атмосфере.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Записаться</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="panel panel-default event-panel">
+            <div class="panel-body event-card event-card-wide">
+                <div class="event-ico"><i class="fa-solid fa-people-group"></i></div>
+                <h4>Клубные встречи сообщества</h4>
+                <p>Регулярные встречи участников ArtSisters: общение, обмен опытом и идеями.</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-sm">Записаться</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

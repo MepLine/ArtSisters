@@ -1,0 +1,102 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<h1 style="margin-top:0;">О нас</h1>
+<p class="text-muted" style="margin-top:-6px;">Информация о ArtSisters</p>
+
+<div class="panel panel-default" style="border-radius:16px; overflow:hidden;">
+    <div class="panel-body" style="padding:26px 28px;">
+
+        <h3 style="margin-top:0; font-weight:700;">Проект ArtSisters</h3>
+
+        <p>
+            <strong>ArtSisters</strong> — творческое пространство, где искусство становится
+            способом отдыха, общения и самовыражения. Мы проводим мастер-классы и встречи,
+            на которых можно попробовать разные техники, вдохновиться и унести с собой
+            готовую работу.
+        </p>
+
+        <p>
+            У нас комфортно и новичкам, и тем, кто уже рисует: мы объясняем по шагам,
+            показываем приёмы и помогаем получить результат, которым хочется гордиться.
+        </p>
+
+        <hr class="soft-hr" />
+
+        <!-- Информационные блоки -->
+        <div class="row">
+
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="display:flex; gap:14px; align-items:flex-start;">
+                    <div class="mini-ico" style="margin:0;">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <div>
+                        <div class="mini-title">Что мы делаем</div>
+                        <div class="mini-text">
+                            Мастер-классы для детей и взрослых, корпоративы,
+                            арт-встречи и творческие вечеринки.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="display:flex; gap:14px; align-items:flex-start;">
+                    <div class="mini-ico" style="margin:0;">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div>
+                        <div class="mini-title">Наша атмосфера</div>
+                        <div class="mini-text">
+                            Тёплая студия, музыка, общение и поддержка —
+                            без стресса и гонки.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="display:flex; gap:14px; align-items:flex-start;">
+                    <div class="mini-ico" style="margin:0;">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <div>
+                        <div class="mini-title">Подходит новичкам</div>
+                        <div class="mini-text">
+                            Не нужно «уметь рисовать» — мы ведём и подсказываем
+                            на каждом этапе.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6" style="margin-bottom:18px;">
+                <div style="display:flex; gap:14px; align-items:flex-start;">
+                    <div class="mini-ico" style="margin:0;">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <div>
+                        <div class="mini-title">Результат</div>
+                        <div class="mini-text">
+                            Уходите с готовой работой и приятными впечатлениями
+                            (и фото на память).
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div style="margin-top:12px;">
+            <a href="{% url 'blog' %}" class="btn btn-primary">
+                Перейти в блог <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="{% url 'contact' %}" class="btn btn-default">Контакты</a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}
